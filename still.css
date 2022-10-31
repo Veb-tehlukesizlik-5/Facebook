@@ -1,78 +1,152 @@
 *{
     margin: 0;
     padding: 0;
-    text-decoration: none;
-    outline: none;
+    box-sizing: border-box;
 }
 
 body{
-    width: 100%;
-    background-color: #f0f2f5;
+    background-color: #fff;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+body, input,button{
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.daxil{
+    padding-top: 130px;
+    padding-bottom: 150px;
+    max-width: 950px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.sol{
+    margin-bottom: 50px;
+}
+
+.sekil{
+    display: block;
+    max-width: 100%;
+    height: 100px;
+    margin: -30px;
+    padding-bottom: 22px;
+}
+
+h2{
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 30px;
+    color: #1c1e21;
 }
 
 form{
+    padding: 15px 15px 24px 15px;
     background-color: #fff;
-    position: absolute;
-    width: 320px;
-    height: 270px;
-    padding: 10px 5px 20px 5px;
-    margin: -10vh 850px;
-    border-radius: 5px;
-    box-shadow: 5px 5px 6px -7px;
+    border-radius: 7px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
-input[type='login'], input[type='password']{
+form a,input,button{
     display: block;
-    background-color: #fff;
-    margin: auto;
-    border: 1.5px solid rgb(200, 200, 200);
-    width: 225px;
-    padding: 10px 40px;
+}
+
+input{
+    width: 100%;
+    margin-bottom: 12px;
+    padding: 15px;
     border-radius: 5px;
-    text-align: center;
-    color: black;
-    font-size: 'Segoe UI';
+    border: 1px solid #dddfe2;
+    outline: none;
+}
+
+input::focus{
+    border-color: #1877f2;
+    box-shadow:  0 0 0 3px #fff;
+    caret-color: #1877f2;
+}
+
+input::placeholder{
+    font-size: 16px;
+    color: #a3a5a8;
+    opacity: 0.5;
+}
+
+form a{
     font-size: 15px;
+    color: #1877f2;
+    text-align: center;
+    margin-top: 15px;
+    text-decoration: none;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(201, 199, 199);
 }
 
-button{
-    border: none;
-    background-color: #1877f2;
-    color: white;
-    margin: auto;
-    width: 283px;
-    display: block;
-    border-radius: 5px;
-    padding: 10px 0;
+form a:hover{
+    text-decoration: underline;
+}
+
+.login , .newaccount{
     font-weight: bold;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 15px;
     cursor: pointer;
+    transition: 200ms cubic-bezier(0.88, 0.55, 1);
 }
 
-.xett{
-    border-top: 1px solid #222;
-    opacity: 0.2;
+.login{
+    font-size: 20px;
+    background-color: #1877f2;
+    width: 100%;
 }
 
 .newaccount{
-    width: 180px;
-    font-size: 14px;
-    background-color: #42b72a;
-    text-align: center;
+    font-size: 18px;
+    background-color: rgb(16, 196, 16);
+    margin: 0 auto;
+    margin-top: 22px;
 }
 
-.sozler{
-    width: 350px;
-    margin-left: 300px;
-    margin-top: 30vh;
-    font-family: "Segoe UI", Roboto, "San Francisco";
+.login:hover{
+    background-color: green;
 }
 
-.sozler img{
-    width: 250px;
+p, p > a{
+    color: #1c1e21;
+    font-size: 15px;
+    margin: 28px 0 0 0;
 }
 
-p{
-    font-size: 20px;
-    font-weight: 600;
-    word-spacing: 3px;
+p > a{
+    font-weight: bold;
+    text-decoration: none;
+}
+
+p > a:hover{
+    text-decoration: underline;
+}
+
+@media (max-width: 900px){
+    .daxil{
+        grid-template-columns: 1fr;
+    }
+
+    .sekil{
+        margin: -25px auto;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    form{
+        max-width: 400px;
+        margin: 0 auto;
+    }
 }
